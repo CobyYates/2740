@@ -1,0 +1,54 @@
+/*--------------BODY----------------*/
+
+div#wrapper {
+	max-width: 75rem;
+	margin: 2rem auto;
+	box-shadow: 0 0 19px #000;
+}
+
+
+/*--------------HEADER----------------*/
+
+header {
+}
+
+
+
+/*--------------NAVIGATION------------*/
+nav {
+	
+	ul {
+	margin-left: $gutter;
+	border-left: 1px solid rgba(0, 0, 0, 0.3);
+	}
+
+	ul li {
+		width: auto;
+		border-right: 1px solid rgba(0,0,0,0.3);
+	}
+	ul li:last-child{border-right: 1px solid rgba(0, 0, 0, 0.3);}
+
+	ul li a {
+	padding: .5rem 1rem;
+	}
+}
+
+/*---------------MAIN----------------*/
+
+main {
+	div.ourStory {
+			-webkit-column-count: 4;
+			-moz-column-count: 4;
+			column-count: 4;
+			-webkit-column-width: 100px; 
+  			-moz-column-width: 100px;	
+			column-width: 100px;
+	}
+
+	figure.photo {width: 41.6vw;}
+
+	@for $i from 1 through 12 {
+		$w: ($i / 12) * 100%;
+		.large-#{$i} {width: $w; float: left;}
+	}
+}

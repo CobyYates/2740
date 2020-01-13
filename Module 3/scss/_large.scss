@@ -1,0 +1,55 @@
+/*----------------------------------------BODY----------------------------------------*/
+
+div#wrapper {
+	max-width: 71.25rem;
+	margin: 2rem auto;
+	box-shadow: 0 0 19px #000;
+}	
+
+
+/*----------------------------------------NAVIGATION----------------------------------------*/
+nav {
+	
+	ul {
+	border-left: 1px solid rgba(0, 0, 0, 0.3);
+	}
+
+	ul li {width: auto;}
+	ul li:last-child{border-right: 1px solid rgba(0, 0, 0, 0.3);}
+
+	ul li a {
+	padding: .5rem 1rem;
+	}
+}
+
+
+/*----------------------------------------MAIN----------------------------------------*/
+
+main {
+
+	padding: 0;
+
+	#tablet {
+		display: none;
+	}
+	#desktop {
+		display: inline;
+	}
+
+	
+	div.gallery {
+		// width: 100%;
+		// text-align: center;
+
+		.photo {
+			// display: inline-block;
+			// clear: both;
+			width: 24%;				
+			padding: 5px 0 5px 0;
+
+			img {
+				width: 100%;
+			}
+		}
+	}
+}

@@ -1,0 +1,29 @@
+/*----------------------------------------Header----------------------------------------*/
+
+header {
+	#slogan {display: block;}
+}
+
+nav {
+	max-width: 100%;
+	
+	ul li {
+	float: left;
+	width: 24.7%;
+	border-right: 1px solid rgba(0,0,0,0.3);
+	}
+}
+
+
+/*----------------------------------------MAIN----------------------------------------*/
+
+main {
+
+	figure.photo {width: 50%-$gutterdbl; float: right;}
+
+	div.blog article {
+		display: block;
+		float: left;
+		width: 50%-$gutterdbl;
+	}
+}

@@ -1,0 +1,140 @@
+/* NAVigation  */
+
+nav {
+	grid-area: nav;
+	ul.closed {max-height: 25rem;}
+
+	button {display: none;}
+	align-self: end;
+
+	ul li a {
+		border: none;
+		padding: .7rem .9rem;
+		transition: background 0.3s linear;
+		-webkit-transition: background 0.3s linear;
+		
+		&:hover {background-color: darken($menuColor, 10%); color: white;}
+	}
+	
+	ul li {float: right;}
+}
+
+.logo {margin-bottom: 0;}
+
+h1 {
+	text-align: left;
+	margin-top: 20px;
+}
+
+hr {
+	grid-area: hr;
+	width: 100%;
+	height: 1.5px;
+	background-color:#ccc;
+	padding: 0;
+	margin: 0;
+}
+
+.cards {
+	grid-area: cards;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	grid-column-gap: 10px;
+	grid-template-areas: 
+		"card1 card2 card3 card4";
+	font-size: .75rem;
+	h2 {
+		text-align: left;
+	}
+
+	img {width: 100%;}
+
+	p {padding-left: 0;}
+	.card1 {grid-area: card1;}
+	.card2 {grid-area: card2;}
+	.card3 {grid-area: card3;}
+	.card4 {grid-area: card4;}
+}
+
+.bottomcards {
+	background-color: #eee;
+	padding: 20px 0;
+	grid-area: cardb;
+	display: grid;
+	grid-column-gap: 15px;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: auto auto auto;
+	grid-template-areas:
+		"struct tech graph"
+		". . graph"
+		"live live live";
+	h2 {text-align: left;}
+	p {text-align: left; padding-left: 5px;}
+	img {width: 100%;}
+}
+
+.struct {
+	grid-area: struct;
+}
+
+.tech {
+	grid-area: tech;
+}
+
+.live {
+	grid-area: live;
+}
+
+.graph {
+	grid-area: graph;
+}
+
+.info {
+	grid-area: info;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-areas: 
+		"info1 info1 info2";
+	h2 {
+		padding-top: 0;
+	}
+	.info1 {
+		grid-area: info1;
+		text-align: left;
+	}
+	.info2 {
+		grid-area: info2;
+		text-align: right;
+	}
+	.bull {margin-left: 5rem;}
+}
+
+.company {
+	grid-area: companies;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+	grid-template-rows: auto auto;
+	grid-template-areas:
+		"a b c d e f";
+
+	.a {grid-area: a; justify-self: center;}
+	.b {grid-area: b; justify-self: center;}
+	.c {grid-area: c; justify-self: center;}
+	.d {grid-area: d; justify-self: center;}
+	.e {grid-area: e; justify-self: center;}
+	.f {grid-area: f; justify-self: center;}
+}
+
+footer {
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: auto;
+	grid-template-areas: "foot";
+	.foot {
+		grid-area: foot;
+		max-width: 64rem;
+		margin-left: auto;
+		margin-right: auto;
+		align-self: start;
+	}
+}

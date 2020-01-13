@@ -1,0 +1,424 @@
+/* 
+html5doctor.com Reset Stylesheet
+v1.6.1
+Last Updated: 2010-09-17
+Author: Richard Clark - http://richclarkdesign.com 
+Twitter: @rich_clark
+*/
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent; }
+
+body {
+  line-height: 1; }
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+nav ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+a {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent; }
+
+/* change colours to suit your needs */
+ins {
+  background-color: #ff9;
+  color: #000;
+  text-decoration: none; }
+
+/* change colours to suit your needs */
+mark {
+  background-color: #ff9;
+  color: #000;
+  font-style: italic;
+  font-weight: bold; }
+
+del {
+  text-decoration: line-through; }
+
+abbr[title], dfn[title] {
+  border-bottom: 1px dotted;
+  cursor: help; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/* change border colour to suit your needs */
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #cccccc;
+  margin: 1em 0;
+  padding: 0; }
+
+input, select {
+  vertical-align: middle; }
+
+/* Prevent adjustments of font size after orientation changes in IE on Windows Phone and in iOS.  */
+html {
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%; }
+
+/*  apply a natural box layout model to all elements  */
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+/* BODY  */
+body {
+  font-family: "Ubuntu", sans-serif;
+  font-size: 16px; }
+
+/* NAVigation  */
+nav {
+  grid-area: nav; }
+  nav button {
+    font-size: 1.5rem;
+    color: #666;
+    background-color: rgba(0, 0, 0, 0.2);
+    width: 3.5rem;
+    margin: 3px 2%;
+    border-radius: 5px; }
+  nav .fas {
+    color: #bbb; }
+  nav ul li a {
+    display: block;
+    color: #666;
+    text-decoration: none;
+    width: 100%;
+    padding: .6rem 2%; }
+  nav ul {
+    overflow: hidden;
+    transition: max-height 0.5s;
+    -webkit-transition: max-height 0.5s;
+    -moz-transition: max-height 0.5s; }
+  nav ul li.active a {
+    background-color: #e0e0e0; }
+  nav ul li ul li a {
+    padding-left: 8%; }
+  nav ul.closed {
+    max-height: 0; }
+  nav ul.open {
+    max-height: 25rem; }
+
+h1 {
+  font-size: 1.75rem;
+  color: #4698ce;
+  font-weight: 400;
+  text-align: center; }
+
+.wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-auto-rows: 60px auto auto auto auto;
+  grid-template-areas: "logo logo" "hr hr" "nav nav" "hero hero" "info info" "title title" "cards cards" "cardb cardb" "companies companies" "footer footer"; }
+
+.title {
+  grid-area: title;
+  padding-top: 10px; }
+
+.logo {
+  grid-area: logo;
+  height: 50px;
+  align-self: end; }
+
+.bottomcards {
+  grid-area: cardb;
+  text-align: center; }
+  .bottomcards h2 {
+    color: #4698ce;
+    font-size: 1.25rem;
+    padding: 8px 5px;
+    font-weight: 400; }
+  .bottomcards p {
+    padding: 5px;
+    font-size: .9rem; }
+  .bottomcards .graph {
+    text-align: center; }
+    .bottomcards .graph p {
+      text-align: center;
+      font-size: .8rem;
+      padding-top: 10px; }
+
+.company {
+  grid-area: companies;
+  padding-top: 2rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto auto;
+  grid-template-areas: "f b" "c d" "e a"; }
+  .company img {
+    width: 100%; }
+  .company .a {
+    grid-area: a;
+    justify-self: center; }
+  .company .b {
+    grid-area: b;
+    justify-self: center; }
+  .company .c {
+    grid-area: c;
+    justify-self: center; }
+  .company .d {
+    grid-area: d;
+    justify-self: center; }
+  .company .e {
+    grid-area: e;
+    justify-self: center; }
+  .company .f {
+    grid-area: f;
+    justify-self: center; }
+
+.cards {
+  grid-area: cards;
+  background-image: linear-gradient(#dadada, #fafafa);
+  padding: .75rem 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-auto-rows: auto auto auto auto;
+  grid-template-areas: "card1" "card2" "card3" "card4";
+  text-align: center; }
+  .cards h2 {
+    color: #4698ce;
+    font-size: 1.25rem;
+    padding: 8px 0;
+    font-weight: 400; }
+
+.card {
+  padding-bottom: 25px; }
+  .card img {
+    width: 90%; }
+  .card p {
+    color: #777;
+    text-align: left;
+    padding: 0 1.5rem;
+    font-size: .9rem; }
+  .card button {
+    background-color: #4698ce;
+    border: none;
+    color: white;
+    padding: 15px 50px;
+    margin-top: 25px;
+    border-radius: 5px; }
+
+.hero {
+  grid-area: hero;
+  width: 100%; }
+
+.info {
+  grid-area: info;
+  background-color: black;
+  text-align: center;
+  padding: 25px 15px;
+  margin-top: 10px; }
+  .info h2 {
+    color: #c4c415;
+    font-weight: 400;
+    font-size: 1.25rem;
+    padding: 15px 0; }
+  .info p {
+    padding: 5px 0;
+    color: white;
+    font-size: 1rem; }
+
+/* FOOTER  */
+footer {
+  grid-area: footer;
+  color: white;
+  display: block;
+  background-image: linear-gradient(#3096BF, #024059);
+  height: 45px;
+  margin-top: 2rem; }
+  footer p {
+    padding: .75rem 0; }
+
+/*----- Clearfix: Force an Element not to collapse -----*/
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both; }
+
+@media only screen and (min-width: 35em) {
+  /* NAVigation  */
+  nav {
+    grid-area: nav;
+    align-self: end; }
+    nav ul.closed {
+      max-height: 25rem; }
+    nav button {
+      display: none; }
+    nav ul li a {
+      border: none;
+      padding: .7rem .9rem;
+      transition: background 0.3s linear;
+      -webkit-transition: background 0.3s linear; }
+      nav ul li a:hover {
+        background-color: #12171a;
+        color: white; }
+    nav ul li {
+      float: right; }
+
+  .logo {
+    margin-bottom: 0; }
+
+  h1 {
+    text-align: left;
+    margin-top: 20px; }
+
+  hr {
+    grid-area: hr;
+    width: 100%;
+    height: 1.5px;
+    background-color: #ccc;
+    padding: 0;
+    margin: 0; }
+
+  .cards {
+    grid-area: cards;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-column-gap: 10px;
+    grid-template-areas: "card1 card2 card3 card4";
+    font-size: .75rem; }
+    .cards h2 {
+      text-align: left; }
+    .cards img {
+      width: 100%; }
+    .cards p {
+      padding-left: 0; }
+    .cards .card1 {
+      grid-area: card1; }
+    .cards .card2 {
+      grid-area: card2; }
+    .cards .card3 {
+      grid-area: card3; }
+    .cards .card4 {
+      grid-area: card4; }
+
+  .bottomcards {
+    background-color: #eee;
+    padding: 20px 0;
+    grid-area: cardb;
+    display: grid;
+    grid-column-gap: 15px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto auto auto;
+    grid-template-areas: "struct tech graph" ". . graph" "live live live"; }
+    .bottomcards h2 {
+      text-align: left; }
+    .bottomcards p {
+      text-align: left;
+      padding-left: 5px; }
+    .bottomcards img {
+      width: 100%; }
+
+  .struct {
+    grid-area: struct; }
+
+  .tech {
+    grid-area: tech; }
+
+  .live {
+    grid-area: live; }
+
+  .graph {
+    grid-area: graph; }
+
+  .info {
+    grid-area: info;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: "info1 info1 info2"; }
+    .info h2 {
+      padding-top: 0; }
+    .info .info1 {
+      grid-area: info1;
+      text-align: left; }
+    .info .info2 {
+      grid-area: info2;
+      text-align: right; }
+    .info .bull {
+      margin-left: 5rem; }
+
+  .company {
+    grid-area: companies;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto auto;
+    grid-template-areas: "a b c d e f"; }
+    .company .a {
+      grid-area: a;
+      justify-self: center; }
+    .company .b {
+      grid-area: b;
+      justify-self: center; }
+    .company .c {
+      grid-area: c;
+      justify-self: center; }
+    .company .d {
+      grid-area: d;
+      justify-self: center; }
+    .company .e {
+      grid-area: e;
+      justify-self: center; }
+    .company .f {
+      grid-area: f;
+      justify-self: center; }
+
+  footer {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: "foot"; }
+    footer .foot {
+      grid-area: foot;
+      max-width: 64rem;
+      margin-left: auto;
+      margin-right: auto;
+      align-self: start; } }
+@media only screen and (min-width: 64em) {
+  .wrapper {
+    max-width: 64rem;
+    margin-left: auto;
+    margin-right: auto; }
+
+  .bottomcards {
+    grid-area: cardb;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto auto auto;
+    grid-template-areas: "struct tech graph" "live live graph"; } }
+
+/*# sourceMappingURL=styles.css.map */

@@ -1,0 +1,35 @@
+
+header {
+	background-image: url('../images/header900x225.jpg');
+}
+
+/*----------------------------------------NAV----------------------------------------*/
+
+nav {
+	
+	ul {
+	margin-left: $gutter;
+	border-left: 1px solid rgba(0, 0, 0, 0.3);
+	}
+
+
+	ul li {width: auto; border-right: 1px solid rgba(0,0,0,0.3);}
+	ul li:last-child{border-right: 1px solid rgba(0, 0, 0, 0.3);}
+
+	ul li a {
+	padding: .5rem 1rem;
+	}
+}
+
+/*----------------------------------------MAIN----------------------------------------*/
+
+main {
+	figure.photo {width: 50%-$gutterdbl; float: left;}
+
+	div.blog article {
+		float: left;
+		width: 50%-$gutterdbl;
+	}
+
+	div.blog article:nth-child(2n+1) {clear: left;}
+}

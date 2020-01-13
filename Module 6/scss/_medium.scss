@@ -1,0 +1,54 @@
+/*----------------------------------------Header----------------------------------------*/
+
+header {
+	height: 130px;
+
+	h1 {padding-top: 50px;}
+
+	// position: relative;
+	ul.social {
+		// position: absolute;
+		bottom: 15rem;
+		top: .5rem;
+		// right: $gutter;
+
+		li {width: auto;}
+	}
+
+}
+
+
+/*----------------------------------------MAIN----------------------------------------*/
+
+main {
+
+	max-width: 100em;
+	margin: 0 auto;
+
+	figure.photo {
+		width: 58.3vw;
+		margin-right: $gutter; 
+		float: right;
+	}
+
+	p {margin-bottom: 15px;}
+
+	div.ourStory {
+		p {
+			-webkit-column-count: 2;
+			-moz-column-count: 2;
+			column-count: 2;
+			-webkit-column-width: 200px; 
+  			-moz-column-width: 200px;	
+			column-width: 200px;
+		}
+	}
+
+	// -------------------------------COLUMN LAYOUT-----------------------
+
+	@for $i from 1 through 12 {
+		$w: ($i / 12) * 100%;
+		.medium-#{$i} {width: $w; float: left;}
+	}
+
+}

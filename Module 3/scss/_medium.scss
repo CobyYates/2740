@@ -1,0 +1,31 @@
+/*----------------------------------------Header----------------------------------------*/
+
+header {
+	#slogan {display: block;}
+}
+
+nav {
+	max-width: 100%;
+	
+	ul li {
+	float: left;
+	width: 24.7%;
+	border-right: 1px solid rgba(0,0,0,0.3);
+	}
+}
+
+
+/*----------------------------------------MAIN----------------------------------------*/
+
+main {
+
+	div.gallery {
+		.photo {width: 32%;}
+		
+		&:last-child {
+			text-align: left;
+			figcaption {text-align: center;}
+		}
+
+	}
+}
